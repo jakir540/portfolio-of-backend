@@ -1,6 +1,6 @@
 // project.interface.ts
 
-export interface IProject {
+export type TProject = {
   id: string; // Unique identifier for each project
   title: string; // Title of the project
   description: string; // Brief description of the project
@@ -14,4 +14,4 @@ export interface IProject {
   status: "Completed" | "In Progress" | "On Hold"; // Status of the project
   features: string[]; // List of key features or highlights of the project
   role: "Frontend" | "Backend" | "Full Stack" | "UI/UX"; // Your role in the project
-}
+};
