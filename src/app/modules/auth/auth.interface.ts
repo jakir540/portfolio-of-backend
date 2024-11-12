@@ -1,4 +1,4 @@
-type UserRole = 'admin' | 'user';
+type UserRole = "admin" | "user";
 
 export type TSignupUser = {
   name: string;
