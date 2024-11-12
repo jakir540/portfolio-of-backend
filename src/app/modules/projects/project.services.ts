@@ -6,7 +6,13 @@ const createProjectIntoDB = async (payload: TProject) => {
   console.log(result);
   return result;
 };
+const getAllProjectsIntoDB = async () => {
+  const allProject = await Project.find();
+  console.log(allProject);
+  return allProject;
+};
 
 export const createProjectServices = {
   createProjectIntoDB,
+  getAllProjectsIntoDB,
 };

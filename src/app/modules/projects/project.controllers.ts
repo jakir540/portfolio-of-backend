@@ -15,7 +15,18 @@ const createProject = catchAsync(async (req, res) => {
     data: result,
   });
 });
+const getAllProjects = catchAsync(async (req, res) => {
+  const allProject = await createProjectServices.getAllProjectsIntoDB();
+
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: "Project retrived are successfully",
+    data: allProject,
+  });
+});
 
 export const createProjectcontrollers = {
   createProject,
+  getAllProjects,
 };
