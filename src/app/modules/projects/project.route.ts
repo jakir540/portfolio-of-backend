@@ -6,5 +6,7 @@ const router = express.Router();
 
 router.post("/project", createProjectcontrollers.createProject);
 router.get("/allProject", createProjectcontrollers.getAllProjects);
+router.get("/project/:projectId", createProjectcontrollers.getProjectById);
+router.patch("/project/:projectId", createProjectcontrollers.updateProjectById);
 
 export const ProjectRoutes = router;

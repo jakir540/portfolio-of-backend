@@ -11,8 +11,28 @@ const getAllProjectsIntoDB = async () => {
   console.log(allProject);
   return allProject;
 };
+// get single project
+const findProjectById = async (projectId: string) => {
+  const allProject = await Project.findById(projectId);
+  console.log(allProject);
+  return allProject;
+};
+// updateProjectById
+const updateProjectById = async (
+  projectId: string,
+  projectData: Partial<TProject>
+) => {
+  const allProject = await Project.findByIdAndUpdate(projectId, projectData, {
+    new: true,
+    runValidators: true,
+  });
+  console.log(allProject);
+  return allProject;
+};
 
 export const createProjectServices = {
   createProjectIntoDB,
   getAllProjectsIntoDB,
+  findProjectById,
+  updateProjectById,
 };
