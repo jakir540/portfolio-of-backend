@@ -22,12 +22,12 @@ const updateProjectById = async (
   projectId: string,
   projectData: Partial<TProject>
 ) => {
-  const allProject = await Project.findByIdAndUpdate(projectId, projectData, {
+  const result = await Project.findByIdAndUpdate(projectId, projectData, {
     new: true,
     runValidators: true,
   });
-  console.log(allProject);
-  return allProject;
+  console.log(result);
+  return result;
 };
 
 export const createProjectServices = {

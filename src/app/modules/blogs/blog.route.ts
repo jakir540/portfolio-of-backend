@@ -7,5 +7,7 @@ const router = express.Router();
 
 router.post("/blog", createBlogcontrollers.createBlog);
 router.get("/AllBlog", createBlogcontrollers.getAllBlogs);
+router.get("/singleBlog/:blogId", createBlogcontrollers.getBlogById);
+router.patch("/updateBlog/:blogId", createBlogcontrollers.updateBlogById);
 
 export const BlogsRoutes = router;
