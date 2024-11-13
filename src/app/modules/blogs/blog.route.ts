@@ -5,7 +5,7 @@ const router = express.Router();
 
 // for create project route
 
-router.post("/blog", createBlogcontrollers.createBlog);
+router.post("/create-blog", createBlogcontrollers.createBlog);
 router.get("/AllBlog", createBlogcontrollers.getAllBlogs);
 router.get("/singleBlog/:blogId", createBlogcontrollers.getBlogById);
 router.patch("/updateBlog/:blogId", createBlogcontrollers.updateBlogById);

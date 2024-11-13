@@ -13,11 +13,11 @@ const modulesRoute = [
     route: AuthRoutes,
   },
   {
-    path: "/create",
+    path: "/project",
     route: ProjectRoutes,
   },
   {
-    path: "/create",
+    path: "/blog",
     route: BlogsRoutes,
   },
 ];
